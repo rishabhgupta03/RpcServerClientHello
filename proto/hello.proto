@@ -1,0 +1,16 @@
+syntax = "proto3";
+
+package hello;
+option go_package = "github.com/rishabhgupta03/test/hello";
+
+message hellorequest {
+    string name = 1;
+}
+
+message helloresponse {
+    string greeting = 1;
+}
+
+service helloservice {
+   rpc Hello(hellorequest) returns (helloresponse) {};
+}
